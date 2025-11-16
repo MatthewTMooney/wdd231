@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dublin Chamber of Commerce" />
+    <meta name="author" content="Your Name" />
+    <title> Dublin Chamber | Home</title>
+    <link rel="icon" href="images/Blanchardstown.ico" />
+    <link rel="stylesheet" href="styles/directory.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Dublin Chamber logo" />
+            <h1>Dublin Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <img src="images/dublin.jpg" alt="Dublin hero banner" />
+            <div class="hero-overlay">
+                <h2>Welcome to the Dublin Chamber</h2>
+                <p>Supporting local business and community success.</p>
+                <a class="cta" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <h2 class="home-title">Home</h2>
+
+        <section class="home-grid">
+            <article class="panel">
+                <h3 class="panel-title">Events</h3>
+                <ul class="events-list">
+                    <li><strong>Dublin Business Breakfast</strong> — 1st Tuesday, 8 AM</li>
+                    <li><strong>Small Enterprise Workshop</strong> — 3rd Thursday, 6 PM</li>
+                    <li><strong>Temple Bar Market</strong> — Saturdays, 10 AM–4 PM</li>
+                </ul>
+            </article>
+
+            <article class="panel">
+                <h3 class="panel-title">Current Weather</h3>
+                <div class="weather-current">
+                    <img id="wx-icon" alt="" />
+                    <div>
+                        <p id="wx-temp" class="wx-temp">--°</p>
+                        <p id="wx-desc" class="wx-desc">Loading…</p>
+                        <p id="wx-city" class="wx-city"></p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel">
+                <h3 class="panel-title">Weather Forecast</h3>
+                <div id="forecast" class="forecast-grid"></div>
+            </article>
+        </section>
+
+        <section class="home-section" id="spotlights">
+            <h3>Member Spotlights</h3>
+            <div class="spotlights-grid" id="spotlights-container"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p><strong>Dublin Chamber of Commerce</strong></p>
+            <p>7 Clare Street</p>
+            <p>Dublin 2, Ireland</p>
+            <p>info@dublinchamber.ie</p>
+            <p>+353 1 644 7200</p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; <span id="year"></span></p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+
+</html>
