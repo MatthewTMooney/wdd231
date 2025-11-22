@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dublin Chamber of Commerce - Join" />
+    <title>Dublin Chamber | Join</title>
+    <link rel="icon" href="images/Blanchardstown.ico" />
+    <link rel="stylesheet" href="styles/join.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Dublin Chamber logo" />
+            <h1>Dublin Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a class="active" href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="home-title">Join the Chamber</h2>
+
+        <section class="join-layout">
+            <!-- FORM -->
+            <section class="panel join-form-panel">
+                <h3 class="panel-title">Membership Application</h3>
+
+                <form method="get" action="thankyou.html">
+                    <label>
+                        First Name
+                        <input type="text" name="firstName" required autocomplete="given-name"
+                            title="Enter your first name" />
+                    </label>
+
+                    <label>
+                        Last Name
+                        <input type="text" name="lastName" required autocomplete="family-name"
+                            title="Enter your last name" />
+                    </label>
+
+                    <label>
+                        Organizational Title
+                        <input type="text" name="orgTitle" autocomplete="organization-title"
+                            title="Enter your organizational title (letters, spaces, hyphens only, minimum 7 characters)"
+                            pattern="^[A-Za-z\- ]{7,}$" placeholder="e.g., Community Outreach Lead" />
+                    </label>
+
+                    <label>
+                        Email Address
+                        <input type="email" name="email" required autocomplete="email"
+                            title="Enter a valid email address" placeholder="e.g., alex@example.org" />
+                    </label>
+
+                    <label>
+                        Mobile Phone
+                        <input type="tel" name="mobile" required autocomplete="tel"
+                            title="Enter your mobile phone number" />
+                    </label>
+
+                    <label>
+                        Business / Organization Name
+                        <input type="text" name="organization" required autocomplete="organization"
+                            title="Enter the name of your business or organization" />
+                    </label>
+
+                    <label>
+                        Membership Level
+                        <select name="membershipLevel" required title="Select your desired membership level">
+                            <option value="" disabled selected>Select a membership level</option>
+                            <option value="np">NP Membership (Non-profit, no fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Business / Organization Description
+                        <textarea name="description" title="Describe your business or organization"
+                            placeholder="Tell us about your mission, services, and community."></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp" />
+
+                    <div class="submit-row">
+                        <input type="submit" value="Submit Membership Application" />
+                    </div>
+                </form>
+            </section>
+
+            <!-- MEMBERSHIP CARDS -->
+            <aside class="join-membership-panel">
+                <section class="panel">
+                    <h3 class="panel-title">Membership Levels</h3>
+                    <p class="membership-intro">
+                        Each level offers more benefits and higher visibility as costs increase.
+                    </p>
+
+                    <div class="membership-grid">
+                        <article class="membership-card">
+                            <div class="membership-pill">No fee</div>
+                            <h4>NP Membership</h4>
+                            <p>For registered non-profits seeking community support and basic exposure.</p>
+                            <a href="#" class="info-link" data-modal-target="modal-np">View NP benefits</a>
+                        </article>
+
+                        <article class="membership-card">
+                            <div class="membership-pill">Entry level</div>
+                            <h4>Bronze Membership</h4>
+                            <p>Affordable entry with access to events and training at a low annual fee.</p>
+                            <a href="#" class="info-link" data-modal-target="modal-bronze">View Bronze benefits</a>
+                        </article>
+
+                        <article class="membership-card">
+                            <div class="membership-pill">Most popular</div>
+                            <h4>Silver Membership</h4>
+                            <p>Mid-tier pricing with added discounts and spotlight features during the year.</p>
+                            <a href="#" class="info-link" data-modal-target="modal-silver">View Silver benefits</a>
+                        </article>
+
+                        <article class="membership-card">
+                            <div class="membership-pill">Premium</div>
+                            <h4>Gold Membership</h4>
+                            <p>Highest fee and maximum benefits: premium advertising, events, and support.</p>
+                            <a href="#" class="info-link" data-modal-target="modal-gold">View Gold benefits</a>
+                        </article>
+                    </div>
+                </section>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p><strong>Dublin Chamber of Commerce</strong></p>
+            <p>7 Clare Street</p>
+            <p>Dublin 2, Ireland</p>
+            <p>info@dublinchamber.ie</p>
+            <p>+353 1 644 7200</p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; <span id="year"></span></p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modal-backdrop" id="modal-np" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-np-title">
+            <button class="modal-close-btn" type="button" aria-label="Close">&times;</button>
+            <h2 id="modal-np-title">NP Membership Benefits</h2>
+            <p>No-fee tier for registered non-profit organizations.</p>
+            <ul>
+                <li>Listing in our online directory</li>
+                <li>Invitations to non-profit networking events</li>
+                <li>Access to select training webinars</li>
+                <li>Discounted community event booths</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal-bronze" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title">
+            <button class="modal-close-btn" type="button" aria-label="Close">&times;</button>
+            <h2 id="modal-bronze-title">Bronze Membership Benefits</h2>
+            <p>Entry-level paid membership for growing organizations.</p>
+            <ul>
+                <li>All NP benefits</li>
+                <li>Priority access to workshops and trainings</li>
+                <li>Member-only newsletter highlights</li>
+                <li>5% discount on ticketed events</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal-silver" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title">
+            <button class="modal-close-btn" type="button" aria-label="Close">&times;</button>
+            <h2 id="modal-silver-title">Silver Membership Benefits</h2>
+            <p>Best for organizations ready to elevate their visibility.</p>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Home-page spotlight placements (2× per year)</li>
+                <li>10% discount on event registrations</li>
+                <li>Quarterly strategy and training sessions</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal-gold" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title">
+            <button class="modal-close-btn" type="button" aria-label="Close">&times;</button>
+            <h2 id="modal-gold-title">Gold Membership Benefits</h2>
+            <p>Premium tier with maximum exposure and highest benefits.</p>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Premium advertising spots across the site</li>
+                <li>15% discount on all events and trainings</li>
+                <li>Exclusive leadership roundtables</li>
+                <li>Priority support and custom campaigns</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/join.js"></script>
+</body>
+
+</html>

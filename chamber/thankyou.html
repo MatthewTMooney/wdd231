@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dublin Chamber of Commerce - Thank You" />
+    <title>Dublin Chamber | Thank You</title>
+    <link rel="icon" href="images/Blanchardstown.ico" />
+    <link rel="stylesheet" href="styles/join.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Dublin Chamber logo" />
+            <h1>Dublin Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a class="active" href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="home-title">Thank You</h2>
+
+        <section class="panel thankyou-panel">
+            <h3 class="panel-title">Application Summary</h3>
+            <p>We’ve received your membership application. Here are the required details you submitted:</p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">First Name</div>
+                    <div class="info-value" id="firstNameDisplay"></div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Last Name</div>
+                    <div class="info-value" id="lastNameDisplay"></div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Email Address</div>
+                    <div class="info-value" id="emailDisplay"></div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Mobile Phone</div>
+                    <div class="info-value" id="mobileDisplay"></div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Business / Organization</div>
+                    <div class="info-value" id="organizationDisplay"></div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Submitted On</div>
+                    <div class="info-value" id="timestampDisplay"></div>
+                </div>
+            </div>
+
+            <p class="thankyou-note">
+                These are the required fields from your application (first name, last name, email, mobile number,
+                business name, and submission timestamp).
+                If anything looks incorrect, you can return to the form and resubmit.
+            </p>
+
+            <a href="join.html" class="button-link">Back to Membership Form</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p><strong>Dublin Chamber of Commerce</strong></p>
+            <p>7 Clare Street</p>
+            <p>Dublin 2, Ireland</p>
+            <p>info@dublinchamber.ie</p>
+            <p>+353 1 644 7200</p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; <span id="year"></span></p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script src="js/thankyou.js"></script>
+</body>
+
+</html>
