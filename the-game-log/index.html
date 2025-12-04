@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Game Log – Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/base.css" />
+</head>
+
+<body>
+    <header>
+        <div class="site-header">
+            <div class="site-logo"></div>
+            <div class="site-title-group">
+                <h1>The Game Log</h1>
+                <p>Track, review and share your gaming experience</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-surface hero-layout">
+            <div>
+                <h2 class="hero-title">Your personal gaming timeline</h2>
+                <p class="hero-text">
+                    Log every game you play, mark them as beaten or dropped, rate your favourites and keep a history you
+                    can share with friends.
+                </p>
+                <a href="library.html" class="btn">Go to your library</a>
+            </div>
+            <div>
+                <h3 style="font-size:0.8rem;margin-top:0;">Quick stats</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Games logged</div>
+                        <div class="stat-value" id="stat-total">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Beaten</div>
+                        <div class="stat-value" id="stat-beaten">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Average rating</div>
+                        <div class="stat-value" id="stat-rating">–</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-surface">
+            <h2>How it works</h2>
+            <ol style="font-size:0.85rem;padding-left:1.1rem;">
+                <li>Log the games you own or are playing in the Library.</li>
+                <li>Update their status and rating as you play and finish them.</li>
+                <li>Use screenshots or exports to share your Game Log with friends.</li>
+            </ol>
+
+
+        </section>
+
+        <section class="ticker-section section-surface">
+            <h2>Recently Added Games</h2>
+            <div class="ticker">
+                <div class="ticker-inner" id="tickerInner"></div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> The Game Log</p>
+    </footer>
+
+
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="scripts/home.js"></script>
+    <script type="module" src="scripts/home-ticker.js"></script>
+
+</body>
+
+</html>

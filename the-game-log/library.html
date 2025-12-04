@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Game Log – Library</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/base.css" />
+</head>
+
+<body>
+    <header>
+        <div class="site-header">
+            <div class="site-logo"></div>
+            <div class="site-title-group">
+                <h1>The Game Log</h1>
+                <p>Track, review and share your gaming experience</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="library.html" class="active">Library</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-surface">
+            <h2>Your library</h2>
+            <div class="filter-bar">
+                <label for="statusFilter">Filter by status:</label>
+                <select id="statusFilter">
+                    <option value="all">All</option>
+                    <option value="playing">Playing</option>
+                    <option value="beaten">Beaten</option>
+                    <option value="backlog">Backlog</option>
+                    <option value="dropped">Dropped</option>
+                </select>
+            </div>
+
+            <div class="game-grid" id="gameGrid">
+
+                <article class="game-card">
+                    <h3>Sample Game</h3>
+                    <p class="game-meta">Platform • Genre • 2024</p>
+                    <p>Status: <strong>Backlog</strong></p>
+                    <p>Rating: <strong>–</strong></p>
+                    <button class="btn btn-secondary" type="button">Details</button>
+                </article>
+            </div>
+        </section>
+
+        <dialog id="gameDialog">
+            <form method="dialog"
+                style="background:#1a1a1a;color:#c4c4c4;border-radius:0.75rem;border:1px solid #2a2a2a;padding:1rem;max-width:420px;">
+                <h2 id="dialogTitle" style="margin-top:0;font-family:'Press Start 2P',monospace;font-size:0.8rem;"></h2>
+                <p id="dialogMeta" style="font-size:0.75rem;opacity:0.8;"></p>
+                <p id="dialogDescription" style="font-size:0.85rem;"></p>
+
+                <label for="dialogStatus">Status</label>
+                <select id="dialogStatus" name="status">
+                    <option value="playing">Playing</option>
+                    <option value="beaten">Beaten</option>
+                    <option value="backlog">Backlog</option>
+                    <option value="dropped">Dropped</option>
+                </select>
+
+                <label for="dialogRating" style="margin-top:0.5rem;">Rating (1–5)</label>
+                <input id="dialogRating" name="rating" type="number" min="1" max="5" />
+
+                <label for="dialogNotes" style="margin-top:0.5rem;">Notes</label>
+                <textarea id="dialogNotes" name="notes"></textarea>
+
+                <div style="margin-top:0.75rem;display:flex;justify-content:flex-end;gap:0.5rem;">
+                    <button value="cancel" class="btn btn-secondary">Cancel</button>
+                    <button value="save" class="btn">Save</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> The Game Log</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="scripts/library.js"></script>
+</body>
+
+</html>

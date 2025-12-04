@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Game Log – Profile & Feedback</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/base.css" />
+</head>
+
+<body>
+    <header>
+        <div class="site-header">
+            <div class="site-logo"></div>
+            <div class="site-title-group">
+                <h1>The Game Log</h1>
+                <p>Track, review and share your gaming experience</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-surface">
+            <h2>Preferences</h2>
+            <div class="form-grid">
+                <div>
+                    <label for="defaultFilter">Default status filter</label>
+                    <select id="defaultFilter" name="defaultFilter">
+                        <option value="all">All</option>
+                        <option value="playing">Playing</option>
+                        <option value="beaten">Beaten</option>
+                        <option value="backlog">Backlog</option>
+                        <option value="dropped">Dropped</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="themeToggle">Theme</label>
+                    <select id="themeToggle" name="themeToggle">
+                        <option value="nes-dark">NES Dark</option>
+                        <option value="light">Light</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-surface">
+            <h2>Feedback / Suggest a Game</h2>
+            <form action="form-result.html" method="get" class="form-grid">
+                <div>
+                    <label for="name">Your name</label>
+                    <input id="name" name="name" type="text" required />
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required />
+                </div>
+
+                <div>
+                    <label for="game">Game title (optional)</label>
+                    <input id="game" name="game" type="text" />
+                </div>
+
+                <div>
+                    <label for="type">Type of feedback</label>
+                    <select id="type" name="type">
+                        <option value="general">General</option>
+                        <option value="bug">Bug report</option>
+                        <option value="feature">Feature request</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+
+                <button class="btn" type="submit">Send feedback</button>
+            </form>
+        </section>
+    </main>
+
+<footer>
+    <p>&copy; <span id="year"></span> The Game Log</p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script type="module" src="scripts/profile.js"></script>
+</body>
+
+</html>

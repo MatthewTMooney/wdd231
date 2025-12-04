@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Received – The Game Log</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/base.css" />
+</head>
+
+<body>
+    <header>
+        <div class="site-header">
+            <div class="site-logo"></div>
+            <div class="site-title-group">
+                <h1>The Game Log</h1>
+                <p>Track, review and share your gaming experience</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-surface">
+            <h2>Thanks for your feedback!</h2>
+            <p>Your message has been submitted. You can go back to your <a href="profile.html">profile</a> or return to
+                the <a href="index.html">home page</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> The Game Log</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
